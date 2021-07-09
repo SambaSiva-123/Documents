@@ -1,0 +1,36 @@
+
+
+Digital Slambook for closed friend circle
+
+Name - ConnectiFy
+
+A user can upload his/her image with signature and some remarks 
+Which will explain their personality as well but it should be crisp one liner.
+
+Option of more photos addition, digital album kind of
+
+User can mention hobbies, interest.
+ hobbies and interest will be populated, user just needs to select
+
+Dreams  what he/she really wants to do in future
+will be populated, user just need to select
+
+There will be opinion section where other friends will pass their thoughts on that person
+
+
+User can perform sign up/sign in/sign out operation
+
+Birth day notification will be sent across friends 1 day before and dynamically created wish message will be sent out the person/user on midnight
+
+Forget password functionality needs to be addressed
+
+Weather integration, BMI integration and dynamically generated wellness tips,  
+entire section on environment 
+if you as a user do subscribe will receive mass tree plantation programme 
+(Organiser details, location, date time and any other necessary details to know) and track carbon foot print data everyday
+
+
+Identification of admin roles as a super user
+
+
+Note: Need to discuss roles of different user , authorisation, estimate days depending upon different functionality, required low level design including which kind of software we are going to leverage in which area 
