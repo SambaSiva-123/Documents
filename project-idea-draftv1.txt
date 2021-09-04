@@ -34,3 +34,20 @@ Identification of admin roles as a super user
 
 
 Note: Need to discuss roles of different user , authorisation, estimate days depending upon different functionality, required low level design including which kind of software we are going to leverage in which area 
+
+
+
+
+4th September,2021
+
+
+1. Design low level diagram(simple one) before implementing
+
+2. Read how to print database name and database schema along with tables in mysql
+
+3. In registration to make process asynchronous we will leverage rabbitmq/kafka/redis
+
+——> after successful registration there will be an asynchronous process to trigger the mail to the concerned people along with admin
+
+
+
