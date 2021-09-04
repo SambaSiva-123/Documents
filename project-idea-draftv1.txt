@@ -60,7 +60,7 @@ role_id will be mapped with role's table role_id
 next time no one can take that user_id
 
 
-7.3 different microservices---- a. Registration component --> responsible for registration, 
+7. microservices---- a. Registration component --> responsible for registration, 
 b. Role and userid_generator data management for admin, rest api will be exposed admin just call it once daily, it will check whether any userid status is inactive or not, if not will call batch job to fill new data
 c. password management --- registration component will call this service to save in seperate table , it will return password_token whicvh will be saved in registration table.
 
