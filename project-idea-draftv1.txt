@@ -50,4 +50,52 @@ Note: Need to discuss roles of different user , authorisation, estimate days dep
 ——> after successful registration there will be an asynchronous process to trigger the mail to the concerned people along with admin
 
 
+4. create one table called Role ---> role_id, role_name(admin,user 2 different value for the time being)
+only admin can alter this table
+
+5. create one table called userid_generator ------> user_id,role_id,created_timestamp,created_by,status
+role_id will be mapped with role's table role_id
+
+6. in registration table user_id will be mapped with userid_generator table , after getting one user_id need to set sttaus of that row to active, so that
+next time no one can take that user_id
+
+
+7.3 different microservices---- a. Registration component --> responsible for registration, 
+b. Role and userid_generator data management for admin, rest api will be exposed admin just call it once daily, it will check whether any userid status is inactive or not, if not will call batch job to fill new data
+c. password management --- registration component will call this service to save in seperate table , it will return password_token whicvh will be saved in registration table.
+
+d. mailing component
+
+e. validate user data
+
+8. after data saved into registration table, just say "you will receive confirmation mail shortly!!!!!!!" in response
+
+9. at the same drop message in queue/channel/topic(rabbit/redis/kafka) with required details like mail id, name,age, sex,phone number [please get this info from user in registration form]
+
+10. validate user data component will validate then reply back to registration component, then for valid user  registration component will call password management component to generate password for perticular user, after receiving that will provide it in the message queue
+
+11. mail component will listen on the other end of this message queue, it will pick and using smtp trigger the mail to user
+
+12. in password management component keep couple of other service apis called changepassword , forgetpassword, it will give control to user to change password or recovery forgotten password [**** will not take password from user at firsttime registration form]
+
+
+
+// will explain how password management component can be robust in terms of algorithm and other aspects
+design this component in such a way that if admin wish can update password encryption/decryption at ease, without touching the business logic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
