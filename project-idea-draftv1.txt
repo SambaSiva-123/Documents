@@ -105,9 +105,17 @@ Eat a Heart-Healthy Diet
 
 Eating a healthy diet is the key to heart disease prevention.
 Know and Control Your Heart Health Numbers
+input:
 
+data: {
+    weight: {value: '85.00', unit: 'kg'},
+    height: {value: '170.00', unit: 'cm'},
+    sex: 'm',
+    age: '24'
+  }
 
-
+output: as per above logic proper statement
+if he/she is in risk of overweight or obesity share the link https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight as well.
 
 
 
